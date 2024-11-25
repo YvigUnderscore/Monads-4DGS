@@ -26,11 +26,11 @@ A user-friendly interface for processing and training 4D Gaussian Splatting mode
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YvigUnderscore/Monads---4DGS
-cd Monads---4DGS
+git clone https://github.com/YvigUnderscore/Monads-4DGS
+cd Monads-4DGS
 ```
 
-2. Install required packages:
+// This is now integrated in latest pull: 2. Install required packages:
 ```bash
 pip install -r requirements.txt
 ```
