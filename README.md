@@ -30,9 +30,9 @@ git clone https://github.com/YvigUnderscore/Monads-4DGS
 cd Monads-4DGS
 ```
 
-// This is now integrated in latest pull: 2. Install required packages:
+2. Install required packages:
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt.
 ```
 
 3. Launch the GUI:
@@ -98,7 +98,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
-
+- https://github.com/fudan-zvg/4d-gaussian-splatting Main repo
 - [4D Gaussian Splatting](https://github.com/hustvl/4DGaussians) team
 - COLMAP developers
 - SideeFX Houdini team
