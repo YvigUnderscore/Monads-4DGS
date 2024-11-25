@@ -101,7 +101,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - https://github.com/fudan-zvg/4d-gaussian-splatting Main repo
 - [4D Gaussian Splatting](https://github.com/hustvl/4DGaussians) team
 - COLMAP developers
-- SideeFX Houdini team
+- SideFX Houdini team
 - This GUI was partially generated with Claude 3.5 (Sonnet) by Anthropic
 
 ## 📚 References
