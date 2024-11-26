@@ -220,7 +220,7 @@ class GaussianProcessor(tk.Tk):
         try:
             commands = [
                 f"cd {self.project_dir.get()}",
-                "git clone https://github.com/fudan-zvg/4d-gaussian-splatting",
+                "git clone https://github.com/YvigUnderscore/4d-gaussian-splatting",
                 "cd 4d-gaussian-splatting",
                 "conda env create --file environment.yml",
                 "conda activate 4dgs"
