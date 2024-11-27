@@ -257,12 +257,45 @@ class GaussianProcessor(tk.Tk):
         
         self.preprocess_progress = ttk.Progressbar(frame, mode='determinate')
         self.preprocess_progress.pack(fill='x', padx=5, pady=10)
+
+        # Bouton pour convertir les modèles binaires en txt
+        ttk.Button(frame, text="Convertir Sparse Bin en TXT", command=self.convert_sparse_to_txt).pack(pady=5)
         
         # Bouton pour générer pose_bounds.npy
         ttk.Button(frame, text="Générer pose_bounds.npy", command=self.generate_pose_bounds).pack(pady=5)
         
+        
+        
         self.preprocess_status = ttk.Label(frame, text="")
         self.preprocess_status.pack(pady=5)
+
+
+    def convert_sparse_to_txt(self):
+        try:
+            # Demander à l'utilisateur de sélectionner le chemin du modèle binaire
+            input_path = filedialog.askdirectory(title="Sélectionnez le dossier du modèle binaire")
+            if not input_path:
+                return
+
+            # Demander à l'utilisateur où enregistrer le modèle converti
+            output_path = filedialog.askdirectory(title="Sélectionnez le dossier pour enregistrer le modèle TXT")
+            if not output_path:
+                return
+
+            # Commande de conversion du modèle
+            command = [
+                "colmap", "model_converter",
+                "--input_path", input_path,
+                "--output_path", output_path,
+                "--output_type", "TXT"
+            ]
+
+            # Exécuter la commande
+            subprocess.run(command, check=True)
+            messagebox.showinfo("Succès", f"Conversion réussie ! Modèle TXT enregistré dans : {output_path}")
+
+        except subprocess.CalledProcessError as e:
+            messagebox.showerror("Erreur", f"Erreur lors de la conversion : {e}")
 
     def generate_pose_bounds(self):
         try:
