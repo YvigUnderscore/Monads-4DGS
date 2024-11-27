@@ -5,6 +5,7 @@ Some of the paths might not be relatives for now.
 ⚠️ **Important Note**  
 In theory, the solution is functional up to the feature extraction step, provided that `4DCAMmaker.py` proves to be a viable approach.
 
+For now I am testing this on the martini videos -->https://github.com/facebookresearch/Neural_3D_Video/releases/tag/v1.0
 # Monads-4DGS 🌟
 
 Une interface utilisateur conviviale pour traiter et entraîner des modèles de **4D Gaussian Splatting**, avec export automatique pour Houdini ! 🎨
