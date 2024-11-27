@@ -7,8 +7,7 @@ import webbrowser
 import logging
 class GaussianProcessor(tk.Tk):
     def __init__(self):
-        super().__init__()
-        
+        super().__init__()        
         self.title("4D Gaussian Splatting Pipeline")
         self.geometry("800x600")
         
@@ -401,9 +400,9 @@ class GaussianProcessor(tk.Tk):
         try:
             commands = [
                 f"cd {self.project_dir.get()}",
-                "git clone https://github.com/YvigUnderscore/4d-gaussian-splatting",
-                "cd 4d-gaussian-splatting",
+                "git clone https://github.com/YvigUnderscore/4d-gaussian-splatting --recursive",
                 "conda env create --file environment.yml",
+                "cd 4d-gaussian-splatting",
                 "conda activate 4dgs"
            
             ]
@@ -454,13 +453,11 @@ class GaussianProcessor(tk.Tk):
         try:
             config = {
                 'training': {
-                    'num_iterations': int(self.training_params['num_iterations'].get()),
                     'batch_size': int(self.training_params['batch_size'].get()),
-                    'learning_rate': float(self.training_params['learning_rate'].get())
                 }
             }
             
-            config_path = os.path.join(self.project_dir.get(), 'config.yaml')
+            config_path = os.path.join(self.project_dir.get(), './config.yaml')
             with open(config_path, 'w') as f:
                 yaml.dump(config, f)
 
