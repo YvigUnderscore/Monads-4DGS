@@ -129,7 +129,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [4D Gaussian Splatting for Real-Time Dynamic Scene Rendering](https://arxiv.org/abs/2310.08528)
 - [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/)
 - [COLMAP - Structure-from-Motion and Multi-View Stereo](https://colmap.github.io/)
-- [Houdini Gaussian Splat Workflow](https://www.sidefx.com/docs/houdini/nodes/sop/gaussiansplatting.html)
+- [Houdini Gaussian Splat Workflow](https://github.com/david-rhodes/GSOPs)
 
 ## 🔍 Citation
 
