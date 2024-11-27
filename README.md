@@ -44,7 +44,7 @@ Assurez-vous d'avoir :
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/YvigUnderscore/Monads-4DGS
+   git clone https://github.com/YvigUnderscore/Monads-4DGS --recursive
    cd Monads-4DGS
    ```
 
