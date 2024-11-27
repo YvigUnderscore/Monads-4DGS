@@ -34,7 +34,7 @@ Assurez-vous d'avoir :
 - ✅ **Python 3.10.11**
 - ✅ **Git**
 - ✅ **Colmap** Pensez à bien l'ajouter à votre path
-- ✅ **FFmpeg** Ajoutez le a votre path également
+- ✅ **FFmpeg** Ajoutez le à votre path également
 - ✅ **Visual Studio 2022** avec outils de build C++
 
 ---
