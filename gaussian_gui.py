@@ -260,7 +260,7 @@ class GaussianProcessor(tk.Tk):
 
         # Bouton pour convertir les modèles binaires en txt
         ttk.Button(frame, text="Convertir Sparse Bin en TXT", command=self.convert_sparse_to_txt).pack(pady=5)
-        
+
         # Bouton pour générer pose_bounds.npy
         ttk.Button(frame, text="Générer pose_bounds.npy", command=self.generate_pose_bounds).pack(pady=5)
         
@@ -299,30 +299,38 @@ class GaussianProcessor(tk.Tk):
 
     def generate_pose_bounds(self):
         try:
-            # Obtenir le nombre de caméras ajoutées
-            num_cameras = self.video_listbox.size()
-            if num_cameras == 0:
-                messagebox.showwarning("Avertissement", "Aucune caméra ajoutée. Veuillez en ajouter avant de continuer.")
+            # Chemin vers le dossier sparse
+            sparse_dir = filedialog.askdirectory(title="Sélectionnez le dossier sparse contenant les fichiers COLMAP")
+            if not sparse_dir:
+                messagebox.showwarning("Avertissement", "Aucun dossier sparse sélectionné.")
                 return
 
             # Chemin de sortie pour le fichier pose_bounds.npy
-            output_file = r"data/N3V/poses_bounds.npy"
-
+            output_file = filedialog.asksaveasfilename(
+                title="Enregistrer le fichier pose_bounds.npy",
+                defaultextension=".npy",
+                filetypes=[("Fichiers Numpy", "*.npy")]
+            )
             if not output_file:
+                messagebox.showwarning("Avertissement", "Aucun fichier de sortie sélectionné.")
                 return
 
             # Commande pour générer le fichier
             command = [
                 "python", "4d-gaussian-splatting/scripts/generate_pose_bounds.py",
-                "--num_cameras", str(num_cameras),
+                "--sparse_dir", sparse_dir,
                 "--output_file", output_file
             ]
 
             # Exécution de la commande
             subprocess.run(command, check=True)
             messagebox.showinfo("Succès", f"Fichier pose_bounds.npy généré avec succès !\nChemin : {output_file}")
+
         except subprocess.CalledProcessError as e:
-            messagebox.showerror("Erreur", f"Erreur lors de la génération : {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de la génération de pose_bounds.npy : {e}")
+        except Exception as e:
+            messagebox.showerror("Erreur", f"Une erreur inattendue est survenue : {e}")
+
 
     def setup_training_tab(self):
         frame = self.tabs['training']
@@ -457,7 +465,7 @@ class GaussianProcessor(tk.Tk):
                 yaml.dump(config, f)
 
             train_cmd = [
-                "python", "train.py",
+                "python", "4d-gaussian-splatting/train.py",
                 "--source_path", self.project_dir.get(),
                 "--config", config_path
             ]
