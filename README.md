@@ -1,5 +1,6 @@
 ⚠️ **Work in Progress**  
-I am currently exploring 4D Gaussian Splatting (4DGS) and want to clarify that I am not a professional developer. This solution is being created to address a specific need for a fully CG short film project.  
+I am currently exploring 4D Gaussian Splatting (4DGS) and want to clarify that I am not a professional developer. This solution is being created to address a specific need for a fully CG short film project.
+Some of the paths might not be relatives for now.  
 
 ⚠️ **Important Note**  
 In theory, the solution is functional up to the feature extraction step, provided that `4DCAMmaker.py` proves to be a viable approach.
