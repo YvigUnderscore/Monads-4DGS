@@ -31,12 +31,12 @@ Une interface utilisateur conviviale pour traiter et entraîner des modèles de 
 
 Assurez-vous d'avoir :
 - ✅ **Windows 10/11** (avec support CUDA)
-- ✅ **NVIDIA GPU** (avec support CUDA 12.1 ou supérieur)
+- ✅ **CUDA TOOLKIT 11.8**
 - ✅ **Python 3.10.11**
 - ✅ **Git**
 - ✅ **Colmap** Pensez à bien l'ajouter à votre path
 - ✅ **FFmpeg** Ajoutez le à votre path également
-- ✅ **Visual Studio 2022** avec outils de build C++
+- ✅ **Visual Studio 2019** avec outils de build C++
 
 ---
 
