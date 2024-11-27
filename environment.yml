@@ -1,5 +1,4 @@
 name: 4dgs
-name: 4dgs
 channels:
   - pytorch
   - nvidia
@@ -15,6 +14,9 @@ dependencies:
   - plyfile=0.8.1
   - colmap
   - pip:
+    - opencv-python
+    - numpy
+    - pyyaml
     - tqdm==4.66.1
     - torchmetrics==1.2.0
     - imagesize==1.4.1
