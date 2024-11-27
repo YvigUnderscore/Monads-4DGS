@@ -13,14 +13,14 @@ Une interface utilisateur conviviale pour traiter et entraîner des modèles de 
 
 ## ✨ Fonctionnalités
 
-- 🔧 Assistant d'installation complet avec vérification des prérequis
+- 🔧 Assistant d'installation complet avec vérification des prérequis 
 - 📹 Traitement multi-caméra pour les vidéos
 - 🤖 Intégration automatisée de COLMAP avec support pour caméras multiples
-- 🎯 Configuration et suivi de l'entraînement en temps réel
+- 🎯 Configuration et suivi de l'entraînement en temps réel (**WIP**)
 - 🛠️ Génération automatique de `poses_bounds.npy` (**WIP**)
 - 🎬 Export direct vers Houdini (**WIP**)
-- 📊 Suivi en temps réel de la progression
-- 🎮 Interface utilisateur intuitive et facile à utiliser
+- 📊 Suivi en temps réel de la progression (**WIP**)
+- 🎮 Interface utilisateur intuitive et facile à utiliser (**WIP wanna make it prettier**)
 
 ---
 
@@ -33,7 +33,9 @@ Assurez-vous d'avoir :
 - ✅ **NVIDIA GPU** (avec support CUDA 12.1 ou supérieur)
 - ✅ **Python 3.10.11**
 - ✅ **Git**
-- ✅ **Visual Studio 2019/2022** avec outils de build C++
+- ✅ **Colmap** Pensez à bien l'ajouter à votre path
+- ✅ **FFmpeg** Ajoutez le a votre path également
+- ✅ **Visual Studio 2022** avec outils de build C++
 
 ---
 
@@ -45,7 +47,7 @@ Assurez-vous d'avoir :
    cd Monads-4DGS
    ```
 
-2. Lancez l'interface graphique :
+2. Lancez l'interface graphique via le "Developer Command Prompt for VS 2022" :
    ```bash
    python gaussian_gui.py
    ```
@@ -54,14 +56,14 @@ Assurez-vous d'avoir :
 
 ## 📝 Utilisation
 
-### Étape 0 : **Installation de l'environnement**
+### Étape 1 : **Installation de l'environnement**
 - Dans l'onglet **Installation**, lancez l'installation automatique de l'environnement et de toutes ses dépendances.
 
-### Étape 1 : **Vidéos ➡️ Images**
+### Étape 2 : **Vidéos ➡️ Images**
 - 📥 Ajoutez vos vidéos multi-caméras dans l'onglet **Import Vidéos**.
 - 🔄 Convertissez-les en séquences d'images.
 
-### Étape 2 : **Prétraitement avec COLMAP**
+### Étape 3 : **Prétraitement avec COLMAP** (**WIP**)
 - 🔧 Configurez COLMAP dans l'onglet **Prétraitement**.
   - Sélectionnez la qualité des caractéristiques SIFT (low, medium, high, extreme).
   - Lancez le traitement sparse :
@@ -70,13 +72,13 @@ Assurez-vous d'avoir :
     - Reconstruction sparse
 - 🛠️ Génération automatique de `poses_bounds.npy` (**WIP**).
 
-### Étape 3 : **Entraînement**
+### Étape 4 : **Entraînement** (**WIP/not tested**)
 - 📋 Configurez les paramètres d'entraînement (itérations, batch size, learning rate).
 - 🚀 Lancez l'entraînement et suivez la progression en temps réel.
 - 🔗 Basé sur [fudan-zvg/4d-gaussian-splatting](https://github.com/fudan-zvg/4d-gaussian-splatting), avec un fork mis à jour et adapté au projet disponible sur [YvigUnderscore/4d-gaussian-splatting](https://github.com/YvigUnderscore/4d-gaussian-splatting).
 
-### Étape 4 : **Export vers Houdini**
-- 🎬 Export direct vers Houdini (**WIP**).
+### Étape 5 : **Export vers Houdini** (**WIP**)
+- 🎬 Export direct vers Houdini.
 
 ---
 
@@ -88,16 +90,16 @@ Assurez-vous d'avoir :
 
 ### **Sorties :**
 - Formats d'export Houdini : USD, Alembic, BGeo (**WIP**)
-- Fichiers intermédiaires : `poses_bounds.npy`, `cameras.txt`, `images.txt`
+- Fichiers intermédiaires : `poses_bounds.npy`, `cameras.txt`, `images.txt` (**WIP**)
 
 ---
 
 ## 📚 Fichiers clés
 
 ### **Scripts principaux**
-- `4DCAMmaker.py` : Crée le dossier `4DCAM` à partir de vos dossiers caméra (`cam##`).
+- `4DCAMmaker.py` : Crée le dossier `4DCAM` à partir de vos dossiers caméra (`cam##`). (**WIP not shure this is a viable technique**)
 - `generate_pose_bounds.py` : Génère un fichier `poses_bounds.npy` à partir des résultats de COLMAP (**WIP**).
-- `gaussian_gui.py` : Interface utilisateur principale pour contrôler le pipeline.
+- `gaussian_gui.py` : Interface utilisateur principale pour contrôler le pipeline. (**WIP**)
 
 ### **Répertoires**
 - **`data/N3V/`** :
@@ -120,7 +122,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - 4D Gaussian Splatting team
 - COLMAP developers
 - SideFX Houdini team
-- This GUI and readme was partially generated with Claude 3.5 (Sonnet) by Anthropic
+- This GUI and read.me was partially generated with Claude 3.5 (Sonnet) by Anthropic
 
 ## 📚 References
 - [4D Gaussian Splatting for Real-Time Dynamic Scene Rendering](https://arxiv.org/abs/2310.08528)
