@@ -1,3 +1,6 @@
+🚨🚨**Pause Project**🚨🚨
+Due to a lot of work i'm stoping thoses searchs for now, I might do another technique from scratch when 4DGS techniques will be easier to manages.
+
 ⚠️ **Work in Progress**  
 I am currently exploring 4D Gaussian Splatting (4DGS) and want to clarify that I am not a professional developer. This solution is being created to address a specific need for a fully CG short film project.
 Some of the paths might not be relatives for now.  
