@@ -1,4 +1,4 @@
-🚨🚨**Pause Project**🚨🚨
+🚨🚨**Paused Project**🚨🚨
 Due to a lot of work i'm stoping thoses searchs for now, I might do another technique from scratch when 4DGS techniques will be easier to manages.
 
 ⚠️ **Work in Progress**  
